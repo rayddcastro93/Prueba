@@ -1,0 +1,139 @@
+El uso de las lecturas de fase le puede ayudar a diferenciar entre estas condiciones. Si usted domina el análisis de fase, su capacidad de diagnosticar defectos correctamente aumentara considerablemente.
+
+El análisis de fase es un instrumento muy poderoso. La percepción puede que la medida de la fase es difícil de reunir o posiblemente que las lecturas son difíciles de comprender o interpretar. Algunas personas pueden creer que esas medidas de fase no ofrecen información útil. Están equivocados.
+
+El propósito de este artículo es de mostrar que la toma de mediadas de fase no es ni difícil de reunir ni difícil de comprender.
+
+Comenzaremos revisando los fundamentos de fase, y entonces miraremos cómo usted puede medir fase con un recolector de datos de un solo canal, de doble-canal, y con un estroboscopio.
+
+En la segunda parte de este artículo, veremos cómo estas lecturas pueden ser utilizadas para diagnosticar una gran variedad de condiciones de defecto: desbalance, desalineación, holgura, eje doblado, cojinete montado, la excentricidad y la resonancia. Revisaremos cómo comparando las lecturas de la fase, se puede revelar tanto acerca de la máquina, y daremos un vistazo rápido a la Forma de Operación de Desvío (ODS) y al análisis modal.
+
+¿Qué es Fase?
+
+Primero, hagamos una revisión rápida de fase.
+
+La fase se trata de Tiempo
+
+La fase se trata del tiempo relativo de acontecimientos relacionados. Aquí están algunos ejemplos:
+
+1. Al balancear estamos interesados en el tiempo entre el lugar pesado en el rotor y una señal de referencia en el eje. Necesitamos determinar donde está ubicado ese lugar pesado, y la cantidad de peso necesaria para contrarrestar las fuerzas giratorias.
+
+2. Cuando miramos las condiciones de defecto como desbalance, desalineación, excentricidad, y problemas de base, estamos interesados en las fuerzas dinámicas dentro de la máquina, y como resultado, el movimiento de un punto en relación con otro punto.
+
+3. Podemos utilizar fase para comprender el movimiento de la máquina o la estructura cuando sospechamos de resonancia estructural en una máquina, donde toda la máquina puede estar oscilando de un lado a otro, torciéndose o botando de arriba hacia abajo.
+
+Por lo tanto, fase es muy útil al balancear, y al tratar de comprender el movimiento de una máquina o la estructura. Pero la fase es también muy útil al tratar de diagnosticar condiciones de defecto de la máquina. Si su actitud es de "los niveles de vibración son altos – necesita una reparación mayor", entonces usted probablemente no tenga ningún interés en fase. Pero si usted quiere hacer un diagnóstico exacto, y distinguir correctamente entre los defectos como desbalance, desalineación y eje doblado, entonces fase es un instrumento imprescindible.
+
+Fundamentos de Fase
+
+Si usted mide la vibración de una máquina y filtra todas las fuentes de vibración dejando sólo la vibración en la frecuencia que corresponden a la velocidad operacional (es decir vibración 1X) entonces la forma de ondas de tiempo es una onda de seno. El nivel de la vibración será dictado por varios factores, pero nos enfocaremos solo en las fuerzas debidas al desbalance.
+
+Utilicemos un simple ventilador como nuestra máquina de referencia. Hay una moneda de oro añadida a una de las hojas, que genera la fuerza de desbalance. Vemos una onda de seno con los correspondientes ángulos de rotación como se muestra en la Figura 1.
+
+fase_1
+
+Pero esta información por sí sola no nos dice mucho. La fase es una medida relativa, así que necesitamos comparar una fuente de vibración a otra fuente de vibración o a una referencia de alguna clase.
+
+Primero trataremos de comprender fase comparando dos fuentes de vibración. Si tuvimos dos ventiladores idénticos, cada uno con monedas en una hoja (para generar la fuerza de desbalance), esperaríamos ver ondas de seno en cada ventilador como se muestra en la Figura 2. Si los ventiladores estuvieran perfectamente sincronizados tanto que ambas monedas estuvieran en la posición de las 12:00 al mismo tiempo, se diría que están "en-fase".
+
+fase_2
+
+Sin embargo, si una moneda estuviera arriba (12:00) cuando la otra estuviera abajo (6:00), estarían "180° fuera de fase", como se muestra en la Figura 3. ¿Por qué 180°? Porque una rotación es 360°, así que la mitad de una rotación es 180°.
+
+fase_3
+
+Y si una moneda estuviera arriba, y la otra a un cuarto de una rotación alrededor, serían 90° (o 270°) fuera de fase, como es mostrado en la Figura 4.
+
+fase_4
+
+Comparando dos Formas de Onda
+
+Si mira los ejemplos anteriores puede ver dos formas de ondas con la misma frecuencia (los ventiladores trabajan exactamente a la misma velocidad). Comparando las dos formas de ondas de tiempo podemos ver la diferencia de tiempo entre ellos. En nuestro ejemplo las formas de ondas han venido de dos ventiladores diferentes. Estamos interesados normalmente en dos fuentes de vibración de la misma máquina. Podemos determinar la diferencia de fase midiendo primero el período (es decir el tiempo) de un ciclo completo (recuerde, un ciclo son 360°) y comparando eso a la diferencia en el tiempo entre las ondas, como se ilustra en la Figura 5.
+
+fase_5
+
+Usando una Referencia
+
+En vez de medir fase como una diferencia de tiempo entre dos fuentes de vibración, puede ser medida como una diferencia de tiempo entre una fuente de vibración y una "referencia". Las dos referencias más comunes son la de colocar un pedazo de cinta reflectora en el eje y entonces utilizar una fotocélula o un láser para generar un pulso cada vez que gira el eje, o utilizar una punta de desplazamiento contraria a una ranura. Cada vez que la ranura pasa la punta del transductor de desplazamiento, el desplazamiento medido cambia dramáticamente entonces la señal tendrá un cambio de paso. Discutiremos esto, mas adelante.
+
+El resultado es una señal de voltaje que proporciona un pulso de "TTL" antes de la revolución como es mostrado en la Figura 6. El tiempo entre pulsos es el período de la velocidad de la máquina. Para mantener los números sencillos, asumamos que el ventilador giraba en 1500 RPM, o 25 Hz. Por lo tanto el tiempo entre los pulsos sería 0.4 segundos (1/25 = 0.04).
+
+fase_6
+
+Como antes, podemos comparar la vibración de la máquina a la señal de la referencia como se ilustra en la Figura 7. El tiempo entre pulsos es de 0.04 segundos, y el tiempo entre los picos de la onda sería de 0.04 segundos. Si hay 0.01 segundos entre el pulso y el pico de la onda, entonces la diferencia de fase sería de 90°. (Nota: ¼ De 0.04 segundos es 0.01 segundos. ¼ de 360° es 90°.) Afortunadamente el recolector de datos tiene la electrónica y el software necesarios para utilizar señales de tacómetro o señales de acelerómetros para determinar el ángulo de fase, así que estos cálculos son realizados automáticamente.
+
+fase_7
+
+Recolectando las lecturas de fase
+
+Miremos más de cerca cómo medimos fase. En la sección anterior describimos dos métodos básicos: utilizando una referencia de tacómetro, y utilizando la vibración de otro sensor. Hay un tercer método que utiliza un estroboscopio, pero llegaremos a eso más tarde.
+
+Utilizando un Tacómetro
+
+Hay varias maneras de obtener una señal de una-por-revolución en un tacómetro. La más común implica el uso de cinta reflectora y un tacómetro óptico (o láser) como se ilustra en la Figura 8.
+
+fase_8
+
+Hay varios productos disponibles que pueden utilizar la luz reflejada, incluyendo la luz de láser, para generar la señal del tacómetro. Algunos trabajarán sin cinta reflectora, siempre y cuando exista un área de alto contraste – por ejemplo, un lugar de pintura.
+
+La foto celda brilla una luz (visible o el láser) en el eje. Debido a la textura y el color de la superficie, la luz no se refleja normalmente. Cuándo la cinta pasa por debajo, la luz se refleja. El tacómetro genera una señal de "TTL" que es alimentada en el recolector de datos.
+
+Otra manera de generar una señal de una-por-revolución es utilizando una punta de desplazamiento (proximidad) la cual es apuntada a una ranura o al tornillo de presión. El cambio en el desplazamiento proporciona el paso en voltaje que es utilizado como referencia. Esto es conocido comercialmente como un "keyphasor" (por Bently Nevada).
+
+La salida del tacómetro es alimentada en la entrada de tacómetro del recolector de datos; puede ser marcado "EXT" o "TACH" o "TRIG" o por alguna otra etiqueta. Usted necesitará buscar en el manual de operación de su recolector de datos para comprender donde conectar la señal del tacómetro y cómo utilizarlo para recolectar las lecturas de fase. La figura 9 es un ejemplo de un recolector de datos, utilizado por DI, SKF, DLI y Rockwell (Entek).
+
+fase_9
+
+El recolector de datos entonces puede utilizar la señal del tacómetro para determinar la velocidad de la máquina, y como una referencia al comparar la vibración en la velocidad operacional (1X) de un acelerómetro, como es ilustrado en la Figura 10. Entonces proporcionará un ángulo de fase de entre 0° y 360° (a veces el recolector de datos puede proporcionar una lectura de -180° a +180°).
+
+fase_10
+
+El recolector de datos puede determinar el ángulo de fase en diferentes maneras. Puede aplicar el método de dos-canales que será discutido más adelante, o puede utilizar el tacómetro para apuntar el proceso de adquisición de datos y adquirir el ángulo de fase del proceso de FFT.
+
+Utilizando un Recolector de datos de Dos-Canales
+
+¿Sabia usted que cuando su recolector de datos toma una medida en una máquina y computa el FFT (espectro), computa realmente la magnitud del espectro (amplitud) y el "espectro de fase"? Pero porque usted no tiene una señal de referencia (el recolector comienza a recolectar cuando usted aprieta el botón, no según cualquier referencia predefinida en el eje) los datos de fase no tienen mucho valor. Así que es desechado y nosotros sólo guardamos el espectro de magnitud.
+
+Sin embargo, hay dos posibilidades disponibles para nosotros. Si la recolección de datos fue sincronizada a la referencia del tacómetro, los datos de fase serían pertinentes. Podríamos mirar la fase en la velocidad operacional y utilizar esa información. Esta es uno de las maneras en la que los recolectores de datos miden fase cuando se usa el tacómetro. Pero hay otra manera.
+
+Si conectamos un acelerómetro a un canal de un recolector de datos de dos canales, y conectamos otro acelerómetro al segundo canal, el recolector de datos los puede probar simultáneamente (esto es esencial) y compara los espectro de fase. Colocaríamos un sensor en una ubicación de referencia, y el segundo sensor en el punto interesante, como es mostrado en la Figura 11. También podemos mover ese sensor a ubicaciones diferentes ver cómo ese ángulo de fase cambia (mientras se deja el sensor de referencia en la misma ubicación todo el tiempo). En la Figura 11 medimos la diferencia en la fase entre el eje vertical y el horizontal.
+
+fase_11
+
+Utilizando un Estroboscopio
+
+Los Estroboscopios se pueden usar para recolectar lecturas de fase de dos maneras.
+
+Estroboscopio como un Tacómetro - Si afinamos el estroboscopio a la velocidad operacional de la máquina (para que el eje o el cople parezcan haber parado de girar), la salida de la luz estroboscópica puede ser conectada a la entrada del tacómetro del recolector de datos. El recolector trataría la señal de la luz estroboscópica como si fueran una entrada normal de tacómetro.
+
+Sin embargo, si la velocidad de la máquina varía ligeramente, la señal del estroboscopio ya no representa la velocidad exacta de la máquina – la lectura de fase será inexacta. Si usted configura el estroboscopio para congelar una ranura, el tornillo de presión o algún otro punto en el eje o cople, entonces debe utilizar eso como su referencia antes de que registre la amplitud y la lectura de fase. Si la velocidad varía entonces usted verá la ranura/tornillo de presión que comienza a girar hacia adelante o hacia atrás. Entonces puede ajustar la tasa de destello para que otra vez se congele.
+
+El recolector de datos manejando el estroboscopio o visa versa
+
+Hay otra manera de utilizar un estroboscopio que es muy efectiva, sin embargo no todos los recolectores o estroboscopios tienen esta capacidad.
+
+El sensor de vibración es conectado al estroboscopio y es colocado en el modo de "EXT". Usted controla la tasa de destello del estroboscopio hasta que congele el movimiento del eje. Cambie a "LOCK/TRACK" y el estroboscopio ahora utilizarán su red de circuitos interna para filtrar la señal de vibración y extraer la vibración en la velocidad operacional. El estroboscopio ahora puede rastrear cualquier cambio en la velocidad. El estroboscopio tendrá típicamente una señal de salida TTL que puede ser conectada a la entrada del tacómetro del recolector de datos. Un Estroboscopio de ejemplo se muestra en la Figura 12.
+
+fase_12
+
+Alternativamente, ciertos modelos de recolectores de datos pueden ser utilizados para rastrear la vibración 1X dominante y manejar el estroboscopio. El recolector de datos o puede rastrear la velocidad 1X automáticamente, o usted puede mover el cursor en un espectro para configurar la velocidad. Un cable es conectado de la salida del recolector de datos a la entrada del estroboscopio. La tasa de destello del estroboscopio está ahora bajo el control del recolector de datos. Si la velocidad de la máquina varía ligeramente, la tasa de destello y la señal de disparador, serán corregidas automáticamente.
+
+Cuándo el recolector o el estroboscopio son configurados para rastrear la velocidad operacional usted puede realizar "medidas visuales de fase". El estroboscopio destellará en la velocidad operacional de la máquina, así el eje (o cople) parecerá congelarse. (Por supuesto, usted debe ser muy cuidadoso – el eje no ha parado y debe tener cuidado de no tocarlo). Entonces debe poner una referencia visual, como una ranura o el tornillo de presión, y utilizar la perilla "Relativa de Fase" en el estroboscopio para ajustar la ranura/tornillo de presión para que esté en la posición 12:00.
+
+Si usted mira el eje/cople mientras mueve el acelerómetro, parecerá como si el eje/cople gira. La cantidad de rotación es dictada por la diferencia de fase entre la posición original del sensor y la nueva posición. Por ejemplo, si la máquina estuvo desbalanceada y usted mueve el acelerómetro 90º, el eje/cople parecerá girar 90º (un cuarto de vuelta), como es demostrado en la Figura 13.
+
+fase_13
+
+Este es un método muy efectivo de análisis de fase. Cuando usted mueve el sensor alrededor de la máquina puede ver cómo la fase cambia sin mirar aún los valores verdaderos de fase. Es mejor si usted puede utilizar un tornillo de presión, ranura, lugar de pintura, o cinta reflectora como su referencia visual. Usted debe comenzar ajustando el estroboscopio para que la referencia este en la cabeza del eje. Al mover el sensor, es muy fácil notar el cambio en la fase.
+
+Utilizando las lectura de fase para diagnosticar un a condición de falla
+
+En la segunda parte de este artículo, investigaremos cómo utilizar las lecturas de fase para diagnosticar condiciones de defecto. Podemos hacer esto de una manera muy sencilla, comparando las lecturas entre dos ejes o dos puntos en la máquina (utilizando un esquema de burbuja para hacerlo más fácil para dar seguimiento a las lecturas), o podemos utilizar un software más sofisticado para animar el movimiento de la máquina y la estructura.
+
+Sea suficiente para decir que las lecturas de fase nos permiten comprender el movimiento relativo de la máquina. Investigamos si dos puntos están en-fases, 90° fuera de fase, 180° fuera de fase, o de alguna otra relación. Los dos puntos comparados pueden ser dos puntos a ambos lados de los coples, dos puntos ya sea al extremo de un componente, o entre dos ejes (por ejemplo horizontal y vertical) en la misma ubicación.
+
+La fase es un gran instrumento de diagnóstico, y si usted tiene un recolector de datos de doble-canal o un estroboscopio, es muy fácil de adquirir e interpretar las lecturas.
+
+Termine de Leer aqui la segunda parte de este artículo.
+
+Jason Tranter es el fundador de Mobius, la compañía de iLearn, y el fundador del Mobius Institute. Jason es el autor de iLearn- Vibration, iLearnAlignment, y del instrumento de análisis. Jason comenzó su carrera en el mundo de la vibración en 1986 en Australia. Después de vender su negocio a DLI en 1990, paso seis anos en una consultora desarrollando un producto cerca de Seattle. Jason ha escrito artículos, y ha desarrollado muchos cursos de capacitación alrededor del mundo. Mobius cuenta con oficinas en Seattle, Knoxville y en Melbourne, Australia, y tiene clientes en más de 80 países
